@@ -1,0 +1,44 @@
+@model PackingList2.Models.Item
+
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <title>title</title>
+</head>
+<body>
+<div>
+    <h1 class="text-center">Add items to the list here</h1>
+
+    <form method="post">
+        <div asp-validation-summary="All" class="alert-danger rounded"></div>
+        <div class="form-row">
+            <div class="col">
+                <label>Title</label>
+                <input type="text" asp-for="Name" class="form-control">
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="col-md-4 mb-3">
+                <label>Category</label>
+                <input type="text" asp-for="Category" class="form-control">
+                <span asp-validation-for="Category" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="col-md-4 mb-3">
+                <label>Quantity</label>
+                <input type="number" asp-for="Count" class="form-control">
+                <span asp-validation-for="Count" class="text-danger"></span>
+
+                <label class="d-block">Notes</label>
+                <input type="text" asp-for="Notes" class="form-control">
+                <span asp-validation-for="Notes" class="text-danger"></span>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary mb-2">Submit</button>
+    </form>
+
+</div>
+</body>
+</html>

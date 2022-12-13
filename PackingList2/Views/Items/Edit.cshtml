@@ -1,0 +1,40 @@
+@model PackingList2.Models.Item
+
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <title>title</title>
+</head>
+<body>
+<div>
+    <h1 class="text-center">Edit items in the list here</h1>
+
+    <form method="post">
+        <div class="form-row">
+            <div class="col">
+                <label>Title</label>
+                <input type="text" asp-for="Name" class="form-control">
+            </div>
+            <div class="col-md-4 mb-3">
+                <label>Category</label>
+                <input type="text" asp-for="Category" class="form-control">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="col-md-4 mb-3">
+                <label>Quantity</label>
+                <input type="number" asp-for="Count" class="form-control">
+
+                <label>Notes</label>
+                <input type="text" asp-for="Notes" class="form-control">
+
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary mb-2">Submit</button>
+    </form>
+
+</div>
+</body>
+</html>
